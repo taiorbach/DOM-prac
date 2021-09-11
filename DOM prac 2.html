@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    .hide{
+        display: none;
+    }
+   
+</style>
+<body>
+    <button onclick="change()">click here!</button>
+    <h2 class="hide love" >love You</h2>
+    <h2 class="hide not_love" > doesnt love you</h2>
+    <script>
+        let y = 0
+      function change(){
+          if(y === 1){
+            document.querySelector(".love").classList.add('hide');
+              document.querySelector(".not_love").classList.remove('hide');
+                y = 0 ;
+          }
+          else {
+            document.querySelector(".love").classList.remove('hide');
+            document.querySelector(".not_love").classList.add('hide');
+              
+              y = 1 ;
+          }
+      }
+        
+      
+            
+        
+    </script>
+</body>
+</html>
