@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .noColor{
+        background-color: white;
+    }
+    .redBg{
+        background-color: red;
+    }
+    .blueBg{
+        background-color: blue;
+    
+    }
+    .greenBg{
+        background-color: green
+        ;
+    }
+    .yellowBg{
+        background-color: yellow;
+    }
+    #selected{
+        width: 100px;
+        height: 60px;
+        text-align: center;
+    }
+</style>
+<body>
+
+    <select onchange="change()" id="selected">
+        <option value="none" class="noColor">
+            none
+        </option>
+        <option  value="red" class="r">
+            red
+        </option>
+        <option  value="blue" class="b">
+            blue
+        </option>
+        <option  value="green" class="g">
+            green
+        </option>
+        <option  value="yellow" class="y">
+            yellow
+        </option>
+    </select>
+
+    <script>
+       
+        
+        function change(){
+            let colorSelect = document.getElementById('selected').value;
+            if(colorSelect === 'red'){
+                document.querySelector('body').classList.add('redBg')
+                document.querySelector('body').classList.remove('blueBg')
+                document.querySelector('body').classList.remove('noColor')
+                document.querySelector('body').classList.remove('yellowBg')
+                document.querySelector('body').classList.remove('greenBg')
+            }
+            else if(colorSelect === 'blue'){
+                document.querySelector('body').classList.add('blueBg')
+                document.querySelector('body').classList.remove('noColor')
+                document.querySelector('body').classList.remove('redBg')
+                document.querySelector('body').classList.remove('yellowBg')
+                document.querySelector('body').classList.remove('greenBg')
+            }else if(colorSelect === 'green'){
+                document.querySelector('body').classList.add('greenBg')
+                document.querySelector('body').classList.remove('blueBg')
+                document.querySelector('body').classList.remove('noColor')
+                document.querySelector('body').classList.remove('redBg')
+                document.querySelector('body').classList.remove('yellowBg')
+                
+            }else if(colorSelect === 'yellow'){
+                document.querySelector('body').classList.add('yellowBg')
+                document.querySelector('body').classList.remove('blueBg')
+                document.querySelector('body').classList.remove('noColor')
+                document.querySelector('body').classList.remove('redBg')
+                document.querySelector('body').classList.remove('greenBg')
+            }else if(colorSelect === 'none'){
+               document.querySelector('body').classList.add('noColor')
+                document.querySelector('body').classList.remove('blueBg')
+                document.querySelector('body').classList.remove('noColor')
+                document.querySelector('body').classList.remove('redBg')
+                document.querySelector('body').classList.remove('yellowBg')
+                document.querySelector('body').classList.remove('greenBg')
+            }
+        }
+    </script>
+    
+</body>
+</html>
